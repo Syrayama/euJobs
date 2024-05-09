@@ -1,6 +1,6 @@
 **A megoldó algoritmusok hatékonyságai**
 
-A megoldás lépésszámai több lefuttatásnál is ugyanazok.
+A megoldás lépésszámai több lefuttatásnál is ugyanazok.  
 Az emlékezetes, 50-es mélységi korlátos BackTrack 46 lépésből oldja meg, míg a Mélységi keresés körfigyeléssel 1339 lépésből.
 
 **Két algoritmus futási ideje:**
