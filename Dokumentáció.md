@@ -3,10 +3,12 @@
 Az állapottér a "GyümölcsökÁllapot" osztály, ami az "AbsztraktÁllapot" absztrakt osztályt valósítja meg, ami a különböző állapotok kezelését teszi lehetővé.
 Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, körte, barack) és végrehajtsa az állapotok közti átmeneteket. Az operátorok egyszerűsége és száma végett a jegyzet alapján az operátorok is ebben az osztályban lettek implementálva.
 
+
 **Osztálydefiníció:**
 
  *    Osztálynév: GyümölcsökÁllapot
  *    Szülőosztály: AbsztraktÁllapot
+
 
 
 **Adattagok:**
@@ -16,9 +18,11 @@ Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, kört
  *    barack: A nálunk lévő barackok számát tárolja (int típusban).
 
 
+
 **Konstruktor:**
 
  *    GyümölcsökÁllapot(int alma, int körte, int barack): Beállítja a nálunk lévő gyümölcsök kezdeti számát.
+
 
 
 **Metódusok:**
@@ -42,6 +46,7 @@ Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, kört
  *    GetHashCode(): Az Equals felülírása miatt szükséges, mert ha két példány egyenlő, akkor a hash kódjuk is egyenlő.
 
  *    A Clone metódust nem kellett felülírni az osztályban, mert a tárolt adatok típusa miatt elég az ősosztályban megvalósított sekély klónozás ( MemberwiseClone() ).
+
 
 
 ***Összefoglalás:***
