@@ -20,7 +20,7 @@ A "MélységiKeresés" osztály a mélységi keresés algoritmust implementálja
 
 **Metódusok:**
 
- * Keresés(): Elindítja a keresési folyamatot. A keresési logika a körfigyelés beállításától függ. Ha a körfigyelés be van kapcsolva, a TerminálisCsúcsKeresés() metódust használja, egyébként a TerminálisCsúcsKeresésGyorsan() metódust, ami gyorsabb, ha nem szükséges a körfigyelés, azonban ha kell a körfigyelés, akkor ez a módszer nem emgfelelő, mert cégtelen ciklusba eshet.
+ * Keresés(): Elindítja a keresési folyamatot. A keresési logika a körfigyelés beállításától függ. Ha a körfigyelés be van kapcsolva, a TerminálisCsúcsKeresés() metódust használja, egyébként a TerminálisCsúcsKeresésGyorsan() metódust, ami gyorsabb, ha nem szükséges a körfigyelés, azonban ha kell a körfigyelés, akkor ez a módszer nem megfelelő, mert cégtelen ciklusba eshet.
 
  * TerminálisCsúcsKeresés(): A mélységi keresést valósítja meg, figyelve a köröket. Amíg van nyílt csúcs, kiveszi a verem tetejéről a csúcsot, kiterjeszti az új csúcsokkal, és ezeket hozzáadja a nyíltakhoz, ha még nem szerepeltek a nyílt vagy zárt halmazban. Ha talál célállapotot, visszatér ezzel a csúccsal.
 
