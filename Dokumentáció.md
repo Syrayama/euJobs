@@ -1,45 +1,32 @@
-**GyümölcsökÁllapot osztály**
+Az alábbi dokumentáció a "BackTrack" osztályra vonatkozik, amely egy visszalépéses (backtracking) kereső algoritmust implementál a gyümölcsök cseréjének problémájára. A "BackTrack" osztály a "GráfKereső" absztrakt osztályból származik, és rekurzív megközelítést alkalmaz a probléma megoldására.
+Osztálydefiníció:
 
-Az állapottér a "GyümölcsökÁllapot" osztály, ami az "AbsztraktÁllapot" absztrakt osztályt valósítja meg, ami a különböző állapotok kezelését teszi lehetővé.
-Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, körte, barack) és végrehajtsa az állapotok közti átmeneteket. Az operátorok egyszerűsége és száma végett a jegyzet alapján az operátorok is ebben az osztályban lettek implementálva.
+ * Osztálynév: BackTrack
+    Szülőosztály: GráfKereső
 
-**Osztálydefiníció:**
+Adattagok:
 
- *    Osztálynév: GyümölcsökÁllapot
- *    Szülőosztály: AbsztraktÁllapot
+    korlát: A keresés mélységi korlátja (integer). Ha 0, nincs korlát beállítva.
+    emlékezetes: Körfigyelés aktiválására szolgáló logikai érték. Ha igaz, a keresés körfigyelést alkalmaz.
 
-**Adattagok:**
+Konstruktorok:
 
- *    alma: A nálunk lévő almák számát tárolja (int típusban).
- *    körte: A nálunk lévő körték számát tárolja (int típusban).
- *    barack: A nálunk lévő barackok számát tárolja (int típusban).
+    BackTrack(Csúcs startCsúcs, int korlát, bool emlékezetes): Beállítja a kezdőcsúcsot, a mélységi korlátot, és az emlékezetes keresési módot.
+    További konstruktorok állnak rendelkezésre különböző paraméterekkel, például csak korláttal, vagy csak emlékezetes mód beállításával.
 
-**Konstruktor:**
+Metódusok:
 
- *    GyümölcsökÁllapot(int alma, int körte, int barack): Beállítja a nálunk lévő gyümölcsök kezdeti számát.
+    Keresés(): A keresési folyamat kezdetét jelenti. A metódus a kezdőcsúcsból indul, és rekurzív módon hívja magát az aktuális csúcsokon keresztül.
 
-**Metódusok:**
+    Keresés(Csúcs aktCsúcs): A rekurzív keresés megvalósítása. A metódus az aktuális csúcsból indul, és a következő lépéseket hajtja végre:
+        Ellenőrzi a mélységi korlátot. Ha a mélység eléri a korlátot, visszalépés történik (null értékkel tér vissza).
+        Ha az emlékezetes mód aktív, akkor a szülőkön keresztül ellenőrzi, hogy az aktuális állapotot korábban már vizsgáltuk-e.
+        Ellenőrzi, hogy az aktuális csúcs célállapot-e (azaz a probléma megoldása). Ha igen, visszaadja ezt a csúcsot mint megoldást.
+        Ha nem célállapot, akkor az összes lehetséges operátort végigpróbálja az aktuális állapoton, új csúcsokat generálva.
+        Az új csúcsokra rekurzívan meghívja a Keresés metódust.
+        Ha egy új csúcs vezet megoldáshoz, a terminális csúcsot visszaadja. Ha nem, a következő operátort próbálja ki.
+        Ha az összes operátor kipróbálása után sem talál megoldást, null értékkel tér vissza.
 
- *    CélÁllapotE(): A kívánt célállapot vizagálatára van. Igaz értéket ad vissza, ha csak egy típusú gyümölcs van, ami nem nulla. Ez azt jelenti, hogy vagy csak almák, csak körték, vagy csak barackok maradtak nálunk. Ez a feladatban leírt kívánt eredmény állapota.
+Összefoglaló:
 
- *    ÁllapotE(): Azt ellenőrzi, hogy egyáltalán elfogadható állapot-e a paraméterként kapott érték. Igazat ad vissza, ha minden gyümölcs száma egyenlő vagy nagyobb, mint 0. Ellenőrzi, hogy a gyümölcsök száma logikailag helyes-e a feladat leírása szerint.
-
- *    PreGyümölcsCsere(int gyümölcs1, int gyümölcs2): Előfeltétel. Segédfüggvény a gyümölcsök cseréjének előkészítésére. Igazat ad vissza, ha mindkét gyümölcs száma nagyobb, mint 0.
-
- *    GyümölcsCsere(int gyümölcs1, int gyümölcs2, int gyümölcs3): Operátor. Végrehajt egy cserét a megadott gyümölcsök között. Az operátor csökkenti az első két gyümölcs mennyiségét eggyel, és növeli a harmadik gyümölcs mennyiségét kettővel. If és else if ágakkal felírva a 3 lehetséges kimenet.
-
- *    SzuperOperátor(int i): Egy átfogó operátor, amely az alapoperátorokat valósítja meg. Visszaadja az eredményt az adott operátor alkalmazásáról. Ezen keresztül lehet elérni az összes operátort. Igazat ad vissza, ha az i.dik alap operátor alkalmazható a belső állapotra. Case-ekkel vannak megvílósítva a lehetőségek.
-
- *    OperátorokSzáma(): Visszaadja az alkalmazható operátorok számát, jelen esetben 3.
-
- *    ToString(): A ToString metódus felülírása, hogy alapvetően a nekünk megfelelő formátumban íródjanak ki az adatok.
-
- *    Equals(): Mivel emlékezetes backtracket és mélységi keresést használok felül kellett írni az Equals-t is a megfelelő összehasonlításhoz.
-
- *    GetHashCode(): Az Equals felülírása miatt szükséges, mert ha két példány egyenlő, akkor a hash kódjuk is egyenlő.
-
- *    A Clone metódust nem kellett felülírni az osztályban, mert a tárolt adatok típusa miatt elég az ősosztályban megvalósított sekély klónozás ( MemberwiseClone() ).
-
-***Összefoglalás:***
-
-A GyümölcsökÁllapot osztály a gyümölcsök csere algoritmus állapotainak kezelését teszi lehetővé. Ez az állapottér. Magában foglalja a gyümölcsök számának nyomon követését, valamint az állapot-átmenetek (cserék) kezelését. A célállapot elérése, azaz amikor csak egy típusú gyümölcs marad, a megoldás célja. Az osztály szorosan kapcsolódik a problémamegoldás logikájához, és szerves része a teljes megoldási folyamatnak. Az operátorok iside kerültek felvételre.
+A "BackTrack" osztály egy hatékony rekurzív keresési megoldást implementál a gyümölcsök cseréje problémájához, kihasználva a visszalépéses algoritmus (backtracking) előnyeit, mint a mélységi korlát és az emlékezetes keresés. Az osztály központi szerepet tölt be a gyümölcsök cseréjével kapcsolatos probléma megoldásában, lehetővé téve a különböző állapotok közötti navigálást a célállapot eléréséig.
