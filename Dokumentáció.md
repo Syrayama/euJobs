@@ -3,7 +3,7 @@
 A megoldás lépésszámai több lefuttatásnál is ugyanazok.
 Az emlékezetes, 50-es mélységi korlátos BackTrack 46 lépésből oldja meg, míg a Mélységi keresés körfigyeléssel 1339 lépésből.
 
-**Két algoritmus futási ideje**
+**Két algoritmus futási ideje:**
 
 ***Emlékezetes BackTrack 50-es mélységi korláttal és Mélységi keresés körfigyeléssel***
  * Megoldási idők másodpercben (BackTrack -- Mélységi):
