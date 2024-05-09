@@ -2,7 +2,7 @@
 
 A program azt a problémát/feladatot hivatott megoldani, hogy van 13 almánk, 46 körténk és 59 barackunk, a csősszel cserélgetünk és 2 különböző gyümölcsért ad a harmadik fajtából kettőt.
 
----**GyümölcsökÁllapot osztály**---
+--- **GyümölcsökÁllapot osztály** ---
 
 Az állapottér a "GyümölcsökÁllapot" osztály, ami az "AbsztraktÁllapot" absztrakt osztályt valósítja meg, ami a különböző állapotok kezelését teszi lehetővé.
 Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, körte, barack) és végrehajtsa az állapotok közti átmeneteket. Az operátorok egyszerűsége és száma végett a jegyzet alapján az operátorok is ebben az osztályban lettek implementálva.
