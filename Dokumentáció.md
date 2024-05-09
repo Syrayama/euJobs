@@ -1,6 +1,6 @@
 **BackTrack osztály**
 
-Az alábbi dokumentáció a "BackTrack" osztályra vonatkozik, amely egy visszalépéses (backtracking) kereső algoritmust implementál a gyümölcsök cseréjének problémájára. A "BackTrack" osztály a "GráfKereső" absztrakt osztályból származik, és rekurzív megközelítést alkalmaz a probléma megoldására.
+A "BackTrack" osztályban van megvalósítva az egyik megoldó algoritmus, a BackTrack. Az osztály egy visszalépéses (backtracking) kereső algoritmust implementál a gyümölcsök cseréjének problémájára. A "BackTrack" osztály a "GráfKereső" absztrakt osztályból származik, és rekurzív megközelítést alkalmaz a probléma megoldására. A visszalépéses keresés ki van egészítve mélységi korlátozással és emlékezetes, ami annyit jelent, hogy figyeli, hogy volt-e már abban az állapotban amibe most belép, ezzel megvalósítva a körfigyelést.
 
 **Osztálydefiníció:**
 
@@ -9,13 +9,15 @@ Az alábbi dokumentáció a "BackTrack" osztályra vonatkozik, amely egy visszal
 
 **Adattagok:**
 
- * korlát: A keresés mélységi korlátja (integer). Ha 0, nincs korlát beállítva.
- * emlékezetes: Körfigyelés aktiválására szolgáló logikai érték. Ha igaz, a keresés körfigyelést alkalmaz.
+ * korlát: A keresés mélységi korlátja (int típus). Ha 0, akkor nincs korlát beállítva.
+ * emlékezetes: Körfigyelés aktiválására szolgáló logikai érték. Ha igazra állítjuk, akkor a keresés körfigyelést alkalmaz.
 
 **Konstruktorok:**
 
  * BackTrack(Csúcs startCsúcs, int korlát, bool emlékezetes): Beállítja a kezdőcsúcsot, a mélységi korlátot, és az emlékezetes keresési módot.
  * További konstruktorok állnak rendelkezésre különböző paraméterekkel, például csak korláttal, vagy csak emlékezetes mód beállításával.
+   * public BackTrack(Csúcs startCsúcs, int korlát) : this(startCsúcs, korlát, false) { }
+   * public BackTrack(Csúcs startCsúcs, bool emlékezetes) : this(startCsúcs, 0, emlékezetes) { }
 
 **Metódusok:**
 
