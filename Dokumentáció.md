@@ -5,20 +5,20 @@ Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, kört
 
 **Osztálydefiníció:**
 
-    - Osztálynév: GyümölcsökÁllapot
-    * Szülőosztály: AbsztraktÁllapot
+        * Osztálynév: GyümölcsökÁllapot
+        * Szülőosztály: AbsztraktÁllapot
 
 
 **Adattagok:**
 
-    * alma: A nálunk lévő almák számát tárolja (int típusban).
-    * körte: A nálunk lévő körték számát tárolja (int típusban).
-    * barack: A nálunk lévő barackok számát tárolja (int típusban).
+        * alma: A nálunk lévő almák számát tárolja (int típusban).
+        * körte: A nálunk lévő körték számát tárolja (int típusban).
+        * barack: A nálunk lévő barackok számát tárolja (int típusban).
 
 
 **Konstruktor:**
 
-    * GyümölcsökÁllapot(int alma, int körte, int barack): Beállítja a nálunk lévő gyümölcsök kezdeti számát.
+    *    GyümölcsökÁllapot(int alma, int körte, int barack): Beállítja a nálunk lévő gyümölcsök kezdeti számát.
 
 
 **Metódusok:**
