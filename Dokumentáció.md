@@ -16,22 +16,22 @@ A "BackTrack" osztályban van megvalósítva az egyik megoldó algoritmus, a Bac
 
  * BackTrack(Csúcs startCsúcs, int korlát, bool emlékezetes): Beállítja a kezdőcsúcsot, a mélységi korlátot, és az emlékezetes keresési módot.
  * További konstruktorok állnak rendelkezésre különböző paraméterekkel, például csak korláttal, vagy csak emlékezetes mód beállításával.
-   * public BackTrack(Csúcs startCsúcs, int korlát) : this(startCsúcs, korlát, false) { }
-   * public BackTrack(Csúcs startCsúcs, bool emlékezetes) : this(startCsúcs, 0, emlékezetes) { }
+   * public BackTrack(Csúcs startCsúcs, int korlát) : this(startCsúcs, korlát, false) { } - Ha ezt a konstruktort hívjuk, akkor csak mélységi korlát lesz, a körfigyelés hamis értékre lesz állítva.
+   * public BackTrack(Csúcs startCsúcs, bool emlékezetes) : this(startCsúcs, 0, emlékezetes) { } - Ha ezt a kontruktort hívjuk, akkor nem lesz mélységi korlát, de lesz körfigyelés, mivel igaz-ra van állítva.
 
 **Metódusok:**
 
- * Keresés(): A keresési folyamat kezdetét jelenti. A metódus a kezdőcsúcsból indul, és rekurzív módon hívja magát az aktuális csúcsokon keresztül.
+ * Keresés(): A keresési folyamat kezdetét jelenti. A metódus a kezdőcsúcsból indul, és rekurzív módon hívja magát az aktuális csúcsokon keresztül. Egy terminális csúcsot ad vissza, ha nincs ilyen, akkor null értéket ad vissza.
 
- * Keresés(Csúcs aktCsúcs): A rekurzív keresés megvalósítása.
+ * Keresés(Csúcs aktCsúcs): A rekurzív keresés megvalósítása. Mivel rekurzív, ezért a visszalépésnek a "return null" felel meg.
        A metódus az aktuális csúcsból indul, és a következő lépéseket hajtja végre:
-        Ellenőrzi a mélységi korlátot. Ha a mélység eléri a korlátot, visszalépés történik (null értékkel tér vissza).
-        Ha az emlékezetes mód aktív, akkor a szülőkön keresztül ellenőrzi, hogy az aktuális állapotot korábban már vizsgáltuk-e.
-        Ellenőrzi, hogy az aktuális csúcs célállapot-e (azaz a probléma megoldása). Ha igen, visszaadja ezt a csúcsot mint megoldást.
-        Ha nem célállapot, akkor az összes lehetséges operátort végigpróbálja az aktuális állapoton, új csúcsokat generálva.
-        Az új csúcsokra rekurzívan meghívja a Keresés metódust.
-        Ha egy új csúcs vezet megoldáshoz, a terminális csúcsot visszaadja. Ha nem, a következő operátort próbálja ki.
-        Ha az összes operátor kipróbálása után sem talál megoldást, null értékkel tér vissza.
+         * Ellenőrzi a mélységi korlátot. Ha a mélység eléri a korlátot, visszalépés történik (null értékkel tér vissza).
+         * Ha az emlékezetes mód aktív, akkor a szülőkön keresztül ellenőrzi, hogy az aktuális állapotot korábban már vizsgáltuk-e.
+         * Ellenőrzi, hogy az aktuális csúcs célállapot-e (azaz a probléma megoldása). Ha igen, visszaadja ezt a csúcsot mint megoldást.
+         * Ha nem célállapot, akkor az összes lehetséges operátort végigpróbálja az aktuális állapoton, új csúcsokat generálva.
+         * Az új csúcsokra rekurzívan meghívja a Keresés metódust.
+         * Ha egy új csúcs vezet megoldáshoz, a terminális csúcsot visszaadja. Ha nem, a következő operátort próbálja ki.
+         * Ha az összes operátor kipróbálása után sem talál megoldást, null értékkel tér vissza.
 
 ***Összefoglaló:***
 
