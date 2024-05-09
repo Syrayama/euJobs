@@ -25,13 +25,13 @@ A "BackTrack" osztályban van megvalósítva az egyik megoldó algoritmus, a Bac
 
  * Keresés(Csúcs aktCsúcs): A rekurzív keresés megvalósítása. Mivel rekurzív, ezért a visszalépésnek a "return null" felel meg.
      A metódus az aktuális csúcsból indul, és a következő lépéseket hajtja végre:
-   1. Ellenőrzi a mélységi korlátot. Ha a mélység eléri a korlátot, visszalépés történik (null értékkel tér vissza).
-   2. Ha az emlékezetes mód aktív, akkor a szülőkön keresztül ellenőrzi, hogy az aktuális állapotot korábban már vizsgáltuk-e.
-   3. Ellenőrzi, hogy az aktuális csúcs célállapot-e (azaz a probléma megoldása). Ha igen, visszaadja ezt a csúcsot mint megoldást.
-   4. Ha nem célállapot, akkor az összes lehetséges operátort végigpróbálja az aktuális állapoton, új csúcsokat generálva.
-   5. Az új csúcsokra rekurzívan meghívja a Keresés metódust.
-   6. Ha egy új csúcs vezet megoldáshoz, a terminális csúcsot visszaadja. Ha nem, a következő operátort próbálja ki.
-   7. Ha az összes operátor kipróbálása után sem talál megoldást, null értékkel tér vissza.
+1.   Ellenőrzi a mélységi korlátot. Ha a mélység eléri a korlátot, visszalépés történik (null értékkel tér vissza).
+2. Ha az emlékezetes mód aktív, akkor a szülőkön keresztül ellenőrzi, hogy az aktuális állapotot korábban már vizsgáltuk-e.
+3. Ellenőrzi, hogy az aktuális csúcs célállapot-e (azaz a probléma megoldása). Ha igen, visszaadja ezt a csúcsot mint megoldást.
+4. Ha nem célállapot, akkor az összes lehetséges operátort végigpróbálja az aktuális állapoton, új csúcsokat generálva.
+5. Az új csúcsokra rekurzívan meghívja a Keresés metódust.
+6. Ha egy új csúcs vezet megoldáshoz, a terminális csúcsot visszaadja. Ha nem, a következő operátort próbálja ki.
+7. Ha az összes operátor kipróbálása után sem talál megoldást, null értékkel tér vissza.
 
 ***Összefoglaló:***
 
