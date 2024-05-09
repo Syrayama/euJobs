@@ -5,8 +5,8 @@ Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, kört
 
 **Osztálydefiníció:**
 
-       * Osztálynév: GyümölcsökÁllapot
-        * Szülőosztály: AbsztraktÁllapot
+Osztálynév: GyümölcsökÁllapot
+Szülőosztály: AbsztraktÁllapot
 
 
 **Adattagok:**
