@@ -1,4 +1,4 @@
-****BackTrack osztály****
+**BackTrack osztály**
 
 Az alábbi dokumentáció a "BackTrack" osztályra vonatkozik, amely egy visszalépéses (backtracking) kereső algoritmust implementál a gyümölcsök cseréjének problémájára. A "BackTrack" osztály a "GráfKereső" absztrakt osztályból származik, és rekurzív megközelítést alkalmaz a probléma megoldására.
 
