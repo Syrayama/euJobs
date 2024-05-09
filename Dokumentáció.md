@@ -6,7 +6,7 @@ A megoldás lépésszámai több lefuttatásnál is ugyanazok. Az emlékezetes, 
 ***Emlékezetes BackTrack 50-es mélységi korláttal:***
  * Megoldási idők másodpercben (BackTrack -- Mélységi):
 
-    1. 0,0161 -- 0,4422
+1. 0,0161 -- 0,4422
    0,0052 -- 0,3692
    0,0034 -- 0,5153
    0,0033 -- 0,5554
