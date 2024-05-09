@@ -50,7 +50,7 @@ A GyümölcsökÁllapot osztály a gyümölcsök csere algoritmus állapotainak 
 
 -----------------------------
 
-2. --- **BackTrack osztály** ---
+2.--- **BackTrack osztály** ---
 
 A "BackTrack" osztályban van megvalósítva az egyik megoldó algoritmus, a BackTrack. Az osztály egy visszalépéses (backtracking) kereső algoritmust implementál a gyümölcsök cseréjének problémájára. A "BackTrack" osztály a "GráfKereső" absztrakt osztályból származik, és rekurzív megközelítést alkalmaz a probléma megoldására. A visszalépéses keresés ki van egészítve mélységi korlátozással és emlékezetes, ami annyit jelent, hogy figyeli, hogy volt-e már abban az állapotban amibe most belép, ezzel megvalósítva a körfigyelést.
 
@@ -92,7 +92,7 @@ A "BackTrack" osztály egy hatékony rekurzív keresési megoldást implementál
 
 -----------------------------
 
-3. --- **MélységiKeresés osztály** ---
+3.--- **MélységiKeresés osztály** ---
 
 A "MélységiKeresés" osztály a mélységi keresés algoritmust implementálja a gyümölcsök cseréjének problémájára. Az osztály a "GráfKereső" absztrakt osztályból származik, és az állapotok közötti navigálásra és a célállapot elérésére szolgál.
 
@@ -126,7 +126,7 @@ A "MélységiKeresés" osztály egy hatékony eszköz a gyümölcscsere problém
 
 -----------------------------
 
-4. --- **A megoldó algoritmusok hatékonyságai** ---
+4.--- **A megoldó algoritmusok hatékonyságai** ---
 
 A megoldás lépésszámai több lefuttatásnál is ugyanazok.  
 Az emlékezetes, 50-es mélységi korlátos BackTrack 46 lépésből oldja meg, míg a Mélységi keresés körfigyeléssel 1339 lépésből.
