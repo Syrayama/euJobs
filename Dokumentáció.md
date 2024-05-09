@@ -5,7 +5,7 @@ Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, kört
 
 **Osztálydefiníció:**
 
-    * Osztálynév: GyümölcsökÁllapot
+    - Osztálynév: GyümölcsökÁllapot
     * Szülőosztály: AbsztraktÁllapot
 
 
@@ -44,6 +44,6 @@ Az osztály felelőssége, hogy kezelje a gyümölcsök állapotait (alma, kört
     * A Clone metódust nem kellett felülírni az osztályban, mert a tárolt adatok típusa miatt elég az ősosztályban megvalósított sekély klónozás ( MemberwiseClone() ).
 
 
-***Összefoglaló:***
+***Összefoglalás:***
 
 A GyümölcsökÁllapot osztály a gyümölcsök csere algoritmus állapotainak kezelését teszi lehetővé. Ez az állapottér. Magában foglalja a gyümölcsök számának nyomon követését, valamint az állapot-átmenetek (cserék) kezelését. A célállapot elérése, azaz amikor csak egy típusú gyümölcs marad, a megoldás célja. Az osztály szorosan kapcsolódik a problémamegoldás logikájához, és szerves része a teljes megoldási folyamatnak. Az operátorok iside kerültek felvételre.
